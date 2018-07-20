@@ -1,0 +1,137 @@
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 -15px;
+
+	body.inner-page & {
+		padding-bottom: 40px;
+	}
+
+	&Item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 700px;
+		flex: 0 0 calc(100% / 3);
+		max-width: calc(100% / 3);
+		padding: 0 15px;
+		border-right: 1px solid #000;
+
+		&:last-child {
+			border-right: 0;
+		}
+
+		&__title {
+			font: 55px $font-theodore-glagolev-display, Arial, sans-serif;
+			font-feature-settings: 'clig' 0, 'calt' 0, 'case' 1;
+			font-kerning: normal;
+			font-variant-ligatures: common-ligatures;
+			text-transform: uppercase;
+			line-height: 70px;
+			max-height: 350px;
+			overflow: hidden;
+			word-wrap: break-word;
+			transition: all 0.4s ease;
+		}
+
+		&__author {
+			font: 16px $font-conqueror-slab-italic, serif;
+			line-height: 20px;
+		}
+
+		&__lead {
+			font: 16px $font-conqueror-slab, serif;
+			margin-bottom: 15px;
+			word-wrap: break-word;
+		}
+
+		&__image {
+			display: flex;
+			flex-direction: column;
+			flex-shrink: 50;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			text-align: center;
+			vertical-align: middle;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			filter: grayscale(100%) contrast(200%);
+			transition: all 0.4s ease;
+		}
+
+		&__link {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			.postsItem__title {
+				color: $link-hover;
+			}
+
+			.postsItem__image {
+				filter: none;
+			}
+		}
+	}
+}
+
+.latest-posts {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+
+	.latest-posts-column {
+		flex: 0 0 calc(100% / 4);
+		max-width: calc(100% / 4);
+		padding: 0 15px;
+
+		&:nth-child(2) {
+			border-right: 1px solid $color-black;
+		}
+
+		&:last-child {
+			.latest-postsItem {
+				margin-bottom: 30px;
+				outline: 4px solid #000;
+				padding: 14px 20px;
+			}
+		}
+	}
+
+	&Item {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 16px 0 10px;
+
+		&__lead {
+			margin-bottom: 16px;
+			word-wrap: break-word;
+		}
+
+		&__date {
+			font-family: $font-conqueror-slab-italic, serif;
+		}
+
+		&__link {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			.latest-postsItem__lead {
+				color: $header-hover;
+			}
+		}
+	}
+}

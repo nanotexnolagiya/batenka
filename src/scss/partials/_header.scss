@@ -1,0 +1,67 @@
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 12;
+	width: 100%;
+	background-color: $color-white;
+
+	body.inner-page & {
+		background-color: $link-hover;
+	}
+
+	body.inner-page.single-page & {
+		background-color: $color-white;
+	}
+
+	.header-section {
+		.header-nav {
+			position: relative;
+			height: 80px;
+			font: 22px $font-reforma, Arial, sans-serif;
+			letter-spacing: 2px;
+			border-bottom: 6px double $color-black;
+
+			&__ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding-top: 20px;
+
+				&-li {
+					&--link {
+						color: $color-black;
+						transition: all 0.4s ease;
+
+						&:hover {
+							color: $header-hover;
+						}
+					}
+				}
+			}
+
+			.logo {
+				display: block;
+				width: 190px;
+
+				&:hover {
+					&:after {
+						filter: none;
+					}
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 10px;
+					width: 190px;
+					height: 62px;
+					filter: grayscale(100%) contrast(200%);
+					background-image: url(../images/sprites/png/logo.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+	}
+}

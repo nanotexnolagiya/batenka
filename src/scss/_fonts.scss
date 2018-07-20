@@ -1,1 +1,38 @@
-// stylelint-disable no-empty-source
+@font-face {
+	font-family: 'ConquerorSlabItalic';
+	font-weight: 700;
+	src: url('../fonts/ConquerorSlab-Italic.woff') format('woff'),
+		url('../fonts/ConquerorSlab-Italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'ConquerorSlabBold';
+	src: url('../fonts/ConquerorSlab-Bold.woff') format('woff'),
+		url('../fonts/ConquerorSlab-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'ConquerorSlab';
+	src: url('../fonts/ConquerorSlab.woff') format('woff'),
+		url('../fonts/ConquerorSlab.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Reforma';
+	src: url('../fonts/ReformaGroteskDemiC.woff2') format('woff2'),
+		url('../fonts/ReformaGroteskDemiC.woff') format('woff'),
+		url('../fonts/ReformaGroteskDemiC.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'ReformaMedium';
+	src: url('../fonts/ReformaGroteskMediumC.woff') format('woff'),
+		url('../fonts/ReformaGroteskMediumC.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'TheodoreGlagolevDisplay';
+	src: url('../fonts/theodoreglagolevdisplay-semibold_30_narrow-webfont.woff2')
+			format('woff2'),
+		url('../fonts/theodoreglagolevdisplay-semibold_30_narrow-webfont.woff')
+			format('woff'),
+		url('../fonts/theodoreglagolevdisplay-semibold_30_narrow-webfont.ttf')
+			format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

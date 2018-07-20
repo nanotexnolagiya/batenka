@@ -1,0 +1,81 @@
+.page-title-wrap {
+	margin-top: 80px;
+
+	body.inner-page & {
+		background-color: $link-hover;
+	}
+
+	body.inner-page.single-page & {
+		background-color: $color-white;
+	}
+
+	.page-title {
+		height: 305px;
+		overflow: hidden;
+		white-space: nowrap;
+
+		&__text {
+			font: 352px $font-reforma-medium, Arial, sans-serif;
+			text-transform: uppercase;
+			text-align: center;
+			user-select: none;
+			cursor: default;
+		}
+	}
+
+	.single-page-title {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 0;
+		border-bottom: 6px double $color-black;
+
+		&__category {
+			font: 26px $font-reforma, Arial, sans-serif;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			text-align: center;
+			color: $link-hover;
+		}
+
+		&__text {
+			flex: 0 0 75%;
+			max-width: 75%;
+			font: 116px $font-theodore-glagolev-display, Arial, sans-serif;
+			line-height: 120px;
+			text-transform: uppercase;
+			text-align: center;
+			font-feature-settings: 'kern' 1, 'frac' 1, 'case' 1, 'calt' 1;
+			font-kerning: normal;
+			font-variant-ligatures: common-ligatures;
+			user-select: none;
+			cursor: default;
+		}
+	}
+
+	.page-submenu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 20px;
+		padding: 6px 0;
+		text-transform: uppercase;
+		text-align: center;
+
+		&Item {
+			margin-right: 20px;
+
+			&__link {
+				letter-spacing: 2px;
+				font: 22px $font-reforma, Arial, sans-serif;
+				line-height: 36px;
+				color: $color-black;
+
+				&:hover {
+					color: $header-hover;
+				}
+			}
+		}
+	}
+}

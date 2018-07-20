@@ -1,0 +1,137 @@
+footer {
+	border-top: 6px double $color-black;
+	padding-top: 40px;
+
+	.subscribe-section {
+		position: relative;
+		min-height: 100px;
+		margin: 30px 0;
+		padding: 18px 24px 24px;
+		border: 2px dashed $color-black;
+
+		.subscribe {
+			display: flex;
+			flex-wrap: wrap;
+
+			&Item {
+				flex: 0 0 calc(100% / 3);
+				max-width: calc(100% / 3);
+
+				.subscribe-form {
+					.form-group {
+						margin-bottom: 16px;
+
+						input {
+							border: 0;
+							border-bottom: 1px solid $color-black;
+							width: 100%;
+							height: 46px;
+							line-height: 46px;
+							font: 18px $font-conqueror-slab, serif;
+							transition: all 0.4s ease;
+
+							&:focus {
+								outline: none;
+							}
+						}
+					}
+
+					.btn-wrap {
+						button {
+							background: $color-black;
+							font: 18px $font-reforma, Arial, sans-serif;
+							width: 100%;
+							height: 42px;
+							line-height: 42px;
+							outline: none;
+							display: inline-block;
+							text-transform: uppercase;
+							text-align: center;
+							color: #fff;
+							text-decoration: none;
+							transition: all 0.18s;
+							letter-spacing: 2px;
+							border: 1px solid $color-black;
+							box-sizing: border-box;
+						}
+					}
+				}
+			}
+
+			&__title {
+				display: table-cell;
+				height: 108px;
+				vertical-align: middle;
+				padding-right: 20px;
+				line-height: 52px;
+				font: 52px $font-theodore-glagolev-display, Arial, sans-serif;
+				font-feature-settings: 'kern' 1, 'frac' 1, 'case' 1, 'calt' 1;
+				font-kerning: normal;
+				font-variant-ligatures: common-ligatures;
+			}
+
+			&__description {
+				height: 108px;
+				vertical-align: middle;
+				padding: 0 32px 0 0;
+				display: table-cell;
+			}
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -15px;
+			left: 32px;
+			height: 28px;
+			width: 51px;
+			background: url(../images/sprites/png/scissors.png) no-repeat center
+				center $color-white;
+			padding: 4px;
+		}
+	}
+
+	.copyright-section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 25px;
+
+		.copyright {
+			align-self: center;
+		}
+
+		.socials {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+
+			&Item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 30px;
+				height: 30px;
+				margin-left: 5px;
+				cursor: pointer;
+				background-color: $color-black;
+				border-radius: 3px;
+				transition: all 0.4s ease;
+
+				.fa {
+					color: $color-white;
+					transition: all 0.4s ease;
+				}
+
+				&:hover {
+					background-color: $color-white;
+
+					.fa {
+						color: $header-hover;
+					}
+				}
+			}
+		}
+	}
+}
